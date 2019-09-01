@@ -1,0 +1,22 @@
+{
+  "name": "healthcare",
+  "version": "1.0.0",
+  "description": "Everybody hurts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PRITISH009/HealthCare.git"
+  },
+  "author": "Pritish Gupta",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PRITISH009/HealthCare/issues"
+  },
+  "homepage": "https://github.com/PRITISH009/HealthCare#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
