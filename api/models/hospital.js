@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
 
 const hospital_schema = mongoose.Schema({
-    _id : mongoose.Schema.Types.ObjectId, 
-    hospital_name : {type : String, required : true},
+    _id : { type : Number, required : true}, 
+    hosp_name : {type : String, required : true},
     location : {
         type : {
             type : String,
