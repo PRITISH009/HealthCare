@@ -17,6 +17,11 @@ app.use('/reset', reset_routes);
 
 app.use(body_parser.json());
 
+app.get('/dbstatus', (req, res, next) => {
+    const state = ['disconnected', 'connected', 'connecting', 'disconnecting'];
+    res.status(200).json({dbstatus: state[mongoose.connection.readyState]});
+})
+
 app.get('/', (req, res) => {
     res.send('Its Working!!');
 })
