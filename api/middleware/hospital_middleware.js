@@ -2,8 +2,6 @@ const Hospital = require('../models/hospital');
 const body_parser = require('body-parser');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://' + process.env.User+':' + process.env.Pass + '@healthcluster-gawcq.mongodb.net/HealthCare?retryWrites=true&w=majority', {useNewUrlParser : true});
-
 var criticality_radius = {
     6 : 0,
     5 : 0.03,

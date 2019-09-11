@@ -8,9 +8,6 @@ const Booking = require('../models/booking');
 const Hospital = require('../middleware/hospital_middleware');
 const hospital = require('../models/hospital');
 
-//Setting Connection with MongoDb Atlas 
-mongoose.connect('mongodb+srv://' + process.env.User+':' + process.env.Pass + '@healthcluster-gawcq.mongodb.net/HealthCare?retryWrites=true&w=majority', {useNewUrlParser : true});
-
 router.post('/book', Hospital, (req, res) => {
     console.log(req.data);
     var index;

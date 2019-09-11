@@ -6,8 +6,6 @@ const Room = require('../models/room');
 const Booking = require('../models/booking');
 const hospital = require('../models/hospital');
 
-mongoose.connect('mongodb+srv://' + process.env.User+':' + process.env.Pass + '@healthcluster-gawcq.mongodb.net/HealthCare?retryWrites=true&w=majority', {useNewUrlParser : true});
-
 
 router.get('/', (req, res)=>{
     Room.updateMany({status : true}, {$set : {status : false}}).exec();
