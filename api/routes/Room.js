@@ -117,6 +117,17 @@ router.post('/unbook', (req, res)=>{
             }
         }
     });
+});
+
+router.get('/', (req,res)=>{
+    hospital.findOne({_id : 101}, (err, data)=>{
+        if(err){console.log(err); 
+            res.send(err);
+        }
+        else{
+            res.send(data);
+        }
+    })
 })
 
 module.exports = router;
