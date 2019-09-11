@@ -7,7 +7,9 @@ const Room_Routes = require('./api/routes/Room');
 const reset_routes = require('./api/routes/reset');
 
 
-mongoose.connect('mongodb+srv://' + process.env.User+':' + process.env.Pass + '@healthcluster-gawcq.mongodb.net/HealthCare?retryWrites=true&w=majority', {useNewUrlParser : true});
+mongoose.connect('mongodb+srv://' + process.env.User+':' + process.env.Pass + '@healthcluster-gawcq.mongodb.net/HealthCare?retryWrites=true&w=majority', {useNewUrlParser : true}).then(x=>{
+    console.log("Status: ", x);
+});
 
 
 console.log(mongoose.connection.readyState);
@@ -26,7 +28,7 @@ app.get('/dbstatus', (req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('Its Working!!');
+    res.send('Its Working1234!!');
 })
 
 
